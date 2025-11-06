@@ -1,11 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<!-- bootstrap link -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
+
+    <header>Biglietto del Treno</header>
+    <hr>
+    <main>
+        <div>
+            <label for="numChilometri">Km da percorrere</label>
+            <input id="numChilometri" type="number">
+        </div>
+        <div>
+            <label for="etaPasseggero">Età passeggero</label>
+            <select name="" id="etaPasseggero">
+                <option value="0">Under 18</option>
+                <option value="1">Under 25</option>
+                <option value="2">Under 35</option>
+                <option value="3">Over 65</option>
+            </select>
+        </div>
+        
+        <button>Calcola prezzo</button>
+
+    </main>
     <script src="./script.js"></script>
 </body>
+
 </html>

@@ -2,7 +2,8 @@
 Scrivere un programma che chieda all’utente:
 Il numero di chilometri da percorrere
 Età del passeggero
-Sulla base di queste informazioni dovrà calcolare il prezzo totale del biglietto di viaggio, secondo le seguenti regole:
+Sulla base di queste informazioni dovrà calcolare il prezzo totale del biglietto di viaggio, 
+secondo le seguenti regole:
 il prezzo del biglietto è definito in base ai km (0.21 € al km)
 va applicato uno sconto del 20% per i minorenni
 va applicato uno sconto del 40% per gli over 65.
@@ -17,3 +18,29 @@ Il recap dei dati e l'output del prezzo finale, andranno quindi stampati in pagi
 Nota:
 Se non vi sentite particolarmente creativi, questa potrebbe essere un’implementazione da seguire per il secondo milestone. Potete scegliere di implementare una soluzione completamente diversa oppure simile, ma in ogni caso cercate di farla vostra.
 */
+
+const NumKmInput = document.getElementById("numChilometri");
+const etaInput = document.getElementById("etaPasseggero")
+const btnCalcola = document.querySelector("button")
+console.log(NumKmInput, etaInput, btnCalcola)
+//crea la funzione con l'evento
+
+btnCalcola.addEventListener("click", function(){
+   
+    const Km = parseInt(NumKmInput.value);
+    const eta = etaInput.value;
+    const prezzoIntero = 0.21*Km;
+    const sconto20 = prezzoIntero * (20 / 100);
+     const sconto40 = prezzoIntero * (40 / 100);
+    if(eta === "0"){
+        result = prezzoIntero - sconto20;
+    }
+    else if(eta === "3"){
+        result = prezzoIntero - sconto40;
+    }
+    else{
+        result = prezzoIntero
+    }
+    console.log(result)
+    
+})
