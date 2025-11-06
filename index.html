@@ -13,24 +13,52 @@
 
 <body>
 
-    <header>Biglietto del Treno</header>
-    <hr>
-    <main>
-        <div>
-            <label for="numChilometri">Km da percorrere</label>
-            <input id="numChilometri" type="number">
+    <header class="bg-danger text-warning fst-italic ps-3 fs-3">TreniSicilia <br>sai quando parti ma non quando arrivi</header>
+    
+    <main class="container bg-danger mt-5">
+        <div class="row">
+            <div class="col ">
+                <!-- calcola il tuo biglietto -->
+                 <h1 class="text-center text-light text-uppercase mt-5 ">Calcola il prezzo del tuo biglietto</h1>
+                <div class="border col-9 bg-light p-4 mx-auto ">
+                    
+                    <form action="">
+                        <!-- riga con 3 campi -->
+                        <div class="row justify-content-between gx-3">                      
+                         <div class="col-3 border">
+                            <label for="numChilometri">Km da percorrere</label>
+                            <input id="numChilometri" type="number">
+                        </div>
+                        <div class="col-3">
+                            <label for="numChilometri">Km da percorrere</label>
+                            <input id="numChilometri" type="number">
+                        </div>
+                        <div class="col-3">
+                            <label for="etaPasseggero">Età passeggero</label>
+                            <select name="" id="etaPasseggero">
+                                <option value="0">Under 18</option>
+                                <option value="1">Under 25</option>
+                                <option value="2">Under 35</option>
+                                <option value="3">Over 65</option>
+                            </select>
+                        </div>
+                         </div>
+                        
+                    <button class="btn btn-primary col-1" type="submit">Calcola prezzo</button>
+                    <button class="btn btn-primary col-1" type="submit">Annulla</button>
+                    </form>
+                </div >
+
+                <h2 class="mt-5 text-center text-light text-uppercase">il tuo biglietto</h2>
+                <!-- il tuo biglietto -->
+                <div class="col-9 border mb-5 bg-light p-4 mx-auto">
+                    il tuo biglietto
+                </div>
+
+
+
+            </div>
         </div>
-        <div>
-            <label for="etaPasseggero">Età passeggero</label>
-            <select name="" id="etaPasseggero">
-                <option value="0">Under 18</option>
-                <option value="1">Under 25</option>
-                <option value="2">Under 35</option>
-                <option value="3">Over 65</option>
-            </select>
-        </div>
-        
-        <button>Calcola prezzo</button>
 
     </main>
     <script src="./script.js"></script>

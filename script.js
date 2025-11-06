@@ -21,11 +21,12 @@ Se non vi sentite particolarmente creativi, questa potrebbe essere un’implemen
 
 const NumKmInput = document.getElementById("numChilometri");
 const etaInput = document.getElementById("etaPasseggero")
-const btnCalcola = document.querySelector("button")
+const btnCalcola = document.querySelector("form")
 console.log(NumKmInput, etaInput, btnCalcola)
 //crea la funzione con l'evento
 
-btnCalcola.addEventListener("click", function(){
+btnCalcola.addEventListener("submit", function(event){
+    event.defaultPrevented();
    
     const Km = parseInt(NumKmInput.value);
     const eta = etaInput.value;
